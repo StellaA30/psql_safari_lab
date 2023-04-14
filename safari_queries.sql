@@ -28,4 +28,14 @@ WHERE id IN (
 )
 ;
 
+-- Extenstion 2: The name of the enclosure where the oldest animal lives. If there are two animals who are the same age choose the first one alphabetically.
+SELECT enclosure_id, MAX(age)
+FROM animals
+GROUP BY enclosure_id;
+
+SELECT name
+FROM enclosures
+WHERE id = 4;
+
+
 
