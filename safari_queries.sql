@@ -37,5 +37,12 @@ SELECT name
 FROM enclosures
 WHERE id = 4;
 
+-- Extension 3: The number of different animal types a given keeper has been assigned to work with.
+SELECT enclosure_id
+FROM assignments
+WHERE employee_id = 3;
 
+SELECT COUNT(DISTINCT type)
+FROM animals
+WHERE enclosure_id = 2 OR enclosure_id = 3;
 
